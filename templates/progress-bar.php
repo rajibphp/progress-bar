@@ -1,8 +1,29 @@
-<div id="<?= is_checkout() ? 'checkout-job': 'post-job'?>">
-    <ul id="progressbar">
-        <li class="active">Dateneingabe</li>
-        <li><?php esc_html_e('Preview', 'wp-job-manager'); ?></li>
-        <li><?php _e('Choose a package', 'wp-job-manager-wc-paid-listings'); ?></li>
-        <li>Checkout</li>
-    </ul>
-</div>
+<?php
+$txt1 = 'Dateneingabe';
+$txt2 = 'Preview';
+$txt3 = 'Choose a package';
+$txt4 = 'Checkout';
+if (ISMOBILEDEVICE()) { ?>
+    <div class="res-progress">
+        <span id="msform">
+            <!-- progressbar -->
+            <ul id="progressbar">
+                <li class="active"><span>1</span><?= $txt1; ?></li>
+                <li class="none"><span>2</span><?= $txt2; ?></li>
+                <li class="none"><span>3</span><?= $txt3; ?></li>
+                <li class="none"><span>4</span><?= $txt4; ?></li>
+            </ul>
+        </span>
+    </div>
+
+<?php } else { ?>
+    <div id="progressbar-div">
+        <ul id="progressbar">
+            <li class="active"><?= $txt1; ?></li>
+            <li><?= $txt2; ?></li>
+            <li><?= $txt3; ?></li>
+            <li><?= $txt4; ?></li>
+        </ul>
+    </div>
+<?php }
+?>

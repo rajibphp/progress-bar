@@ -8,7 +8,7 @@ jQuery(document).ready(function (t) {
         addClass("li");
     }
 
-    function addClass(elem) {
-        t("ul " + elem).addClass("active");
+    function addClass(elem) { console.log(elem);
+        t("ul " + elem).addClass("active").css("display", "block");
     }
 });

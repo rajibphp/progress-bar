@@ -1,68 +1,86 @@
 body {
-	font-family: montserrat, arial, verdana;
+    font-family: montserrat, arial, verdana;
 }
 
 /*form styles*/
 
-#post-job, #checkout-job {
-	width: 50%;
-	margin: -120px auto;
-	text-align: center;
-	position: relative;
+#progressbar-div {
+    width: 50%;
+    /* margin: -142px auto; */
+    text-align: center;
+    position: relative;
+    display: inline-block;
 }
 
 /*progressbar*/
 
 #progressbar {
-	margin-bottom: 30px;
-    overflow: hidden;
+    margin-bottom: 30px;
     counter-reset: step;
-    height: 150px;
-    padding: 20px 0;
 }
 
 #progressbar li {
-	list-style-type: none;
-	color: #26af61;
-	text-transform: uppercase;
-	font-size: 9px;
-	width: 25%;
-	float: left;
-	position: relative;
+    list-style-type: none;
+    color: #666;
+    text-transform: uppercase;
+    font-size: 9px;
+    width: 20%;
+    float: left;
+    position: relative;
+    margin-top: -30px;
 }
 
 #progressbar li:before {
-	content: counter(step);
+    content: counter(step);
     counter-increment: step;
-    width: 40px;
+    width: 50px;
     display: block;
     font-size: 10px;
-    color: #333;
-    background: white;
+    color: #fff;
+    background: #a6a6a6;
     margin: 0 auto 5px auto;
-    height: 40px;
+    height: 50px;
     border-radius: 50%;
-    line-height: 40px;
-    top: 65px;
+    line-height: 50px;
+    top: 75px;
     position: relative;
+    z-index: 99;
 }
 
 /*progressbar connectors*/
 
-#progressbar li:after {
-	content: '';
-    width: 100%;
+#progressbar:after {
+    content: '';
+    width: 91.5%;
     height: 2px;
-    background: #ddd;
+    background: #92d050;
     position: absolute;
-    left: -50%;
-    top: 85px;
-    z-index: -1;
+    left: -34px;
+    top: 75px;
 }
-
+#progressbar li:last-child:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #92d050 !important;
+    position: absolute;
+    right: -45px;
+    top: 99px;
+}
+#progressbar:before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #92d050;
+    position: absolute;
+    left: -45px;
+    top: 70px;
+}
 #progressbar li:first-child:after {
-	/*connector not needed before the first step*/
-	content: none;
+    /*connector not needed before the first step*/
+    content: none;
 }
 
 /*marking active/completed steps green*/
@@ -70,6 +88,38 @@ body {
 /*The number of the step and the connector before it = green*/
 
 #progressbar li.active:before, #progressbar li.active:after {
-	background: #27AE60;
-	color: white;
+    background: #27AE60;
+    color: white;
 }
+#progressbar li.active {
+    font-weight: 600 !important;
+    color: #27ae5f;
+}
+#titlebar.single.submit-page {
+    padding: 0;
+    height: 130px;
+}
+#titlebar.single {
+    padding: 0;
+    height: 130px;
+}
+.submit-page {
+    padding: 0 8% important;
+}
+#titlebar.single.submit-page h2 {
+    /*padding: 0; */
+    display: inline-block;
+    /* width: 0; */
+    position: relative;
+    top: 20px;
+}
+#titlebar h2, #titlebar h1 {
+    display: inline-block;
+}
+#breadcrumbs {
+    display: inline-block;
+    top: 35px;
+    position: relative;
+    left: -144px;
+}
+
