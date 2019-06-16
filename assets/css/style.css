@@ -5,8 +5,8 @@ body {
 /*form styles*/
 
 #progressbar-div {
-    width: 50%;
-    /* margin: -142px auto; */
+    width: 80%;
+    float:right;
     text-align: center;
     position: relative;
     display: inline-block;
@@ -23,8 +23,8 @@ body {
     list-style-type: none;
     color: #666;
     text-transform: uppercase;
-    font-size: 9px;
-    width: 20%;
+    font-size: 12px;
+    width: 25%;
     float: left;
     position: relative;
     margin-top: -30px;
@@ -51,21 +51,21 @@ body {
 
 #progressbar:after {
     content: '';
-    width: 91.5%;
+    width: 100%;
     height: 2px;
     background: #92d050;
     position: absolute;
-    left: -34px;
+    left: 0;
     top: 75px;
 }
-#progressbar li:last-child:after {
+#progressbar li:last-child::after {
     content: '';
     width: 12px;
     height: 12px;
     border-radius: 50%;
     background: #92d050 !important;
     position: absolute;
-    right: -45px;
+    right: 0;
     top: 99px;
 }
 #progressbar:before {
@@ -75,7 +75,7 @@ body {
     border-radius: 50%;
     background: #92d050;
     position: absolute;
-    left: -45px;
+    left: 0;
     top: 70px;
 }
 #progressbar li:first-child:after {
@@ -107,14 +107,12 @@ body {
     padding: 0 8% important;
 }
 #titlebar.single.submit-page h2 {
-    /*padding: 0; */
     display: inline-block;
-    /* width: 0; */
     position: relative;
-    top: 20px;
 }
 #titlebar h2, #titlebar h1 {
     display: inline-block;
+    margin-top: 45px;
 }
 #breadcrumbs {
     display: inline-block;
@@ -122,4 +120,6 @@ body {
     position: relative;
     left: -144px;
 }
-
+#titlebar.single.submit-page h2, .submit-page {
+    padding: 0;
+}
