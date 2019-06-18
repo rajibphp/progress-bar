@@ -161,6 +161,7 @@ body {
 		counter-reset: step;
 		height: auto;
 		padding: 0;
+		margin-left:0
 	}
 	.res-progress #progressbar li {
 		width: auto;
@@ -182,7 +183,6 @@ body {
 		display: block;
 		font-size: 14px;
 		color: #fff;
-		background: #27ae5f;
 		margin: 0 auto 5px auto;
 		height: 40px;
 		border-radius: 50%;
@@ -208,3 +208,16 @@ body {
 		display: none;
 	}
 }
+.res-progress #progressbar {
+	margin-left: 0;
+}
+
+/*rhossain start*/
+.res-progress #progressbar li span{
+    float: left;
+}
+.res-progress #progressbar li span.active{
+    background:  #27ae5f;
+}
+
+/*rhossain end*/

@@ -31,11 +31,6 @@ function progressBar()
     load_template(PROGRESS_BAR_PLUGIN_DIR . '/templates/progress-bar.php');
 }
 
-function afterForm()
-{
-    afterFormDiv();
-}
-
 add_filter('plugin_action_links', 'disable_plugin_deactivation', 10, 4);
 function disable_plugin_deactivation($actions, $plugin_file)
 {
@@ -50,6 +45,6 @@ function disable_plugin_deactivation($actions, $plugin_file)
 
 function isMobileDevice()
 {
-//    return 1;
+    return 1;
     return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
 }

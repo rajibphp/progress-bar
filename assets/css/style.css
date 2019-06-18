@@ -123,3 +123,44 @@ body {
 #titlebar.single.submit-page h2, .submit-page {
     padding: 0;
 }
+@media only screen and (max-width: 1300px) {
+    #progressbar li::before {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        top: 80px;
+    }
+    #post-job, #checkout-job {
+        width: 60%;
+        margin-left: 10%;
+    }
+    #progressbar-div {
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 991px) {
+    #progressbar li::before {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        top: 80px;
+    }
+    #post-job, #checkout-job {
+        width: 60%;
+        margin-left: 10%;
+    }
+    #progressbar::after {
+        left: -4px;
+    }
+    #progressbar-div {
+        width: 60%;
+    }
+    #progressbar:before {
+        left: -5px;
+    }
+}
+/*rhossain start*/
+#titlebar h1, #titlebar h2 {
+    margin-top: 65px !important;
+}
+/*rhossain end*/
