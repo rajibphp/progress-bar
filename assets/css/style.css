@@ -49,47 +49,60 @@ body {
 
 /*progressbar connectors*/
 
-#progressbar:after {
+#progressbar li:after {
     content: '';
     width: 100%;
     height: 2px;
-    background: #92d050;
+    background: #a6a6a6;
     position: absolute;
     left: 0;
-    top: 75px;
+    top: 105px;
 }
-#progressbar li:last-child::after {
-    content: '';
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #92d050 !important;
-    position: absolute;
-    right: 0;
-    top: 99px;
-}
+/*#progressbar li:last-child::after {*/
+/*    content: '';*/
+/*    width: 12px;*/
+/*    height: 12px;*/
+/*    border-radius: 50%;*/
+/*    background: #92d050 !important;*/
+/*    position: absolute;*/
+/*    right: 0;*/
+/*    top: 99px;*/
+/*}*/
 #progressbar:before {
     content: '';
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: #92d050;
+    background: #27ae5f;
     position: absolute;
     left: 0;
     top: 70px;
+    z-index: 1
 }
-#progressbar li:first-child:after {
-    /*connector not needed before the first step*/
-    content: none;
+#progressbar:after{
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #a6a6a6;
+    position: absolute;
+    right: 0;
+    top: 70px;
+    z-index: 1
 }
+/*#progressbar li:first-child:after {*/
+/*    content: none;*/
+/*}*/
 
 /*marking active/completed steps green*/
 
 /*The number of the step and the connector before it = green*/
 
-#progressbar li.active:before, #progressbar li.active:after {
+#progressbar li.active:before{
     background: #27AE60;
-    color: white;
+}
+#progressbar li.active:after {
+    background: #27AE60 !important;
 }
 #progressbar li.active {
     font-weight: 600 !important;
@@ -123,6 +136,7 @@ body {
 #titlebar.single.submit-page h2, .submit-page {
     padding: 0;
 }
+
 @media only screen and (max-width: 1300px) {
     #progressbar li::before {
         width: 40px;
@@ -161,6 +175,17 @@ body {
 }
 /*rhossain start*/
 #titlebar h1, #titlebar h2 {
-    margin-top: 65px !important;
+    margin-top: 60px !important;
+}
+#progressbar li.active:last-of-type span::after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #27AE60;
+    position: absolute;
+    right: 0;
+    top: 100px;
+    z-index: 9;
+    border-radius: 50%;
 }
 /*rhossain end*/
